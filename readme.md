@@ -10,3 +10,6 @@ If you discover a security vulnerability within Arcana.io, please send an e-mail
 ## License
 
 The Arcana.io is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT). For information regarding third party packages and tools, please refer to their own individual licenses. 
+
+## Setup
+To get started, see the INSTALL file.

@@ -1,0 +1,46 @@
+This is a unofficial setup guide provided by an external developer.
+
+
+#### Install PHP
+sudo apt-get install php7.0-cli php-mbstring composer php-xml php-zip php-redis  php-curl
+(On Windows, you can install Composer via their website (https://getcomposer.org/download/)
+
+Change your php.ini file as follows for fileinfo, curl, mbstring, ftp, exif, *mysql*
+```
+Windows:
+;extension=php_fileinfo.dll ->; extension=php_fileinfo.dll
+Linux:
+;extension=php_fileinfo.dll ->; extension=fileinfo.so
+```
+
+In the ArcanaIO root folder:
+composer install
+composer global require "laravel/installer"
+
+
+#### Libraries
+sudo apt-get install redis-server mysql-server mysql
+sudo composer install
+sudo composer global require "laravel/installer"
+sudo apt-get install nodejs npm
+npm install gulp
+npm install (In the ArcanaIO Root folder)
+
+#### Services
+sudo apt-get install redis-server
+(In another window)redis-server
+
+sudo apt-get install mysql-server
+(In another window)mysql-server
+
+##### Artisan Setup
+Copy .env.example to .env
+Fill out APP_ID, APP_KEY, APP_PRIVATE_KEY from values gained by signing up at www.algolia.com
+
+php artisan vendor:publish --provider="Laravel\Scout\ScoutServiceProvider"
+Generate an app key
+php artisan key:generate ; php artisan config:clear ; php artisan config:cache
+php artisan migrate
+
+#### Start the ArcanaIO server
+php artisan serve

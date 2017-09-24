@@ -45,6 +45,7 @@
           <a href="http://reddit.com/r/arcana_io" class="item"><i class="large reddit icon"></i> /r/arcana_io</a>
           <a href="http://twitter.com/arcana_io" class="item"><i class="large twitter icon"></i> @arcana_io</a>
           <a href="https://www.patreon.com/arcanaio" class="item"><i class="large dollar icon"></i> Support on Patreon</a>
+          <a href="https://github.com/Arcanaio/Arcanaio" class="item"><i class="large github icon"></i> Developers</a>
         </div>
       </div>
       {{--
