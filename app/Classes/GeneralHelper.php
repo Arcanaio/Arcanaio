@@ -20,6 +20,7 @@ class GeneralHelper {
 			'radiant' => 'Radiant',
 			'thunder' => 'Thunder',
 			'nonmagical' => 'Non-magical',
+			'magical' => 'Magical',
 			'silver' => 'Silver',
 			'adamantine' => 'Adamantine',
 		];
@@ -66,6 +67,9 @@ class GeneralHelper {
 			'sylvan' => 'Sylvan',
 			'undercommon' => 'Undercommon',
 			'telepathy' => 'Telepathy',
+			'auran' => 'Auran',
+			'aquan' => 'Aquan',
+			'ignan' => 'Ignan',
 			'terran' => 'Terran',
 		];
 	}
@@ -77,6 +81,8 @@ class GeneralHelper {
 			'd8' => 'd8',
 			'd10' => 'd10',
 			'd12' => 'd12',
+			'd20' => 'd20',
+			'd100' => 'd100',
 		];
 	}
 
