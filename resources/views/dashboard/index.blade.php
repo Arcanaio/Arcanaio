@@ -136,7 +136,7 @@
         <div class="header">Campaigns</div>
         <div class="ui small feed">
           @if(!$campaigns->isEmpty())
-            @foreach($campaigns as $campaign)
+            @foreach($campaigns->sortByDesc('created_at') as $campaign)
               <div class="event">
                 <div class="content">
                   <div class="summary">

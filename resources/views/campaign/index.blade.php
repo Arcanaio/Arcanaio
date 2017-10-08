@@ -34,7 +34,7 @@
     </tr></thead>
     <tbody>
       @if(!$campaigns->isEmpty())
-        @foreach($campaigns as $campaign)
+        @foreach($campaigns->sortByDesc('created_at') as $campaign)
           <tr>
             <td><a href="{{ url('campaign', $campaign->id) }}">{{ $campaign->name }}</a></td>
             <td>{{ $campaign->created_at->diffForHumans() }}</td>
