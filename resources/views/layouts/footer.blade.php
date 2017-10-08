@@ -20,9 +20,13 @@
               <a class="ui circular icon mini button" href="https://www.reddit.com/r/arcana_io/">
                 <i class="reddit icon"></i>
               </a>
+              <a href="https://github.com/Arcanaio/Arcanaio" class="ui tiny image">
+                <img src="/img/github.png" alt="">
+              </a>
               <a href="https://www.patreon.com/arcanaio" class="ui tiny image">
                 <img src="/img/patreon.png" alt="">
-              </a>
+              </a>              
+              
 
             </p>
           </div>
