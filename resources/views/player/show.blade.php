@@ -1412,45 +1412,7 @@
     @endif
   </div>
 
-  <div class="ui fluid card">
-    <div class="content">
-      <h4 class="ui sub header">Attached Files</h4>
-      <div class="ui small feed">
-        @if($player->files->isEmpty())
-          No files attached.
-        @else
-          @foreach($player->files as $file)
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a href="{{ Storage::url($file->path) }}" target="_blank" class="pull-left">{{ $file->name }}</a>
-
-                   @can('delete', $file)
-                   <form action="{{ url('file/delete/'.$file->id) }}" method="POST" class="pull-right">
-                     {{ csrf_field() }}
-                     {{ method_field('DELETE') }}
-                     <button type="submit" class="ui icon compact mini right floated red button">
-                         <i class="trash icon"></i>
-                     </button>
-                   </form>
-                   @endcan
-                </div>
-              </div>
-            </div>
-          @endforeach
-        @endif
-
-      </div>
-    </div>
-    @can('update', $player)
-      <div class="extra content text-center">
-        <a class="ui mini button" id="upload-modal-trigger">
-          <i class="file pdf outline icon"></i>
-          Upload PDF or Image
-        </a>
-      </div>
-    @endcan
-  </div>
+  @include('partials.files', ['data' => $player, 'type' => 'player'])
 
   <div class="ui feed">
     <div class="event">
