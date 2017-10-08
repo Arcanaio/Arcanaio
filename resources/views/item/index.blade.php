@@ -179,7 +179,7 @@ $( document ).ready(function() {
       attributeName: 'type',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">Type</h4>'
       },

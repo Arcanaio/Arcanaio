@@ -178,7 +178,7 @@ $( document ).ready(function() {
       attributeName: 'type',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 25,
       templates: {
         header: '<h4 class="ui sub header">Type</h4>'
       },
@@ -194,7 +194,7 @@ $( document ).ready(function() {
       attributeName: 'subtype',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">Subtype</h4>'
       },

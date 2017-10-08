@@ -211,7 +211,7 @@ $( document ).ready(function() {
       attributeName: 'environment',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 25,
       templates: {
         header: '<h4 class="ui sub header">Environment</h4>'
       },

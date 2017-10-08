@@ -203,7 +203,7 @@ $( document ).ready(function() {
       attributeName: 'class',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">Class</h4>'
       },
@@ -219,7 +219,7 @@ $( document ).ready(function() {
       attributeName: 'school',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">School</h4>'
       },

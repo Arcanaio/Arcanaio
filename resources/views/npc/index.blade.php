@@ -180,7 +180,7 @@ $( document ).ready(function() {
       attributeName: 'profession',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">Profession</h4>'
       },
@@ -196,7 +196,7 @@ $( document ).ready(function() {
       attributeName: 'race',
       autoHideContainer: false,
       operator: 'or',
-      limit: 10,
+      limit: 20,
       templates: {
         header: '<h4 class="ui sub header">Race</h4>'
       },
