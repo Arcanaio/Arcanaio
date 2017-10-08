@@ -286,8 +286,10 @@ class NpcController extends Controller {
 		//
 		//  Start new Npc instance and pass it all input.
 		//
-		$spell_ability = request('spell_ability');
-		$npc->spell_save = 8 + request('proficiency')+\Common::mod(request($spell_ability));
+		if (request('spell_ability')) {
+		    $spell_ability = request('spell_ability');
+		    $npc->spell_save = 8 + request('proficiency')+\Common::mod(request($spell_ability));
+		}
 
 		$npc->languages = is_array(request('languages')) ? implode(array_map('ucfirst', request('languages')), ', ') : NULL;
 

@@ -330,8 +330,10 @@ class MonsterController extends Controller {
 		//
 		//  Start new Monster instance and pass it all input.
 		//
-		$spell_ability = request('spell_ability');
-		$monster->spell_save = 8 + request('proficiency')+\Common::mod(request($spell_ability));
+		if (request('spell_ability')) {
+			$spell_ability = request('spell_ability');
+			$monster->spell_save = 8 + request('proficiency')+\Common::mod(request($spell_ability));
+		}
 
 		$monster->languages = is_array(request('languages')) ? implode(array_map('ucfirst', request('languages')), ', ') : NULL;
 
