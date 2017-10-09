@@ -120,7 +120,7 @@
       <div class="item">
         <h5 class="ui header">Description</h5>
 
-          {!! $item->description ? clean($item->description) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
+          {!! $item->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($item->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
 
       </div>
     </div>

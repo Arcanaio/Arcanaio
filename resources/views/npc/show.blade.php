@@ -79,7 +79,7 @@
       <div class="item">
         <div class="header inline">Description</div>
 
-          {!! $npc->description ? clean($npc->description) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this npc.</blockquote>' !!}
+     {!! $npc->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($npc->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
 
       </div>
       <div class="ui stats divider"></div>

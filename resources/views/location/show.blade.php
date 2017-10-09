@@ -59,7 +59,7 @@
       <div class="item">
         <div class="header inline">Description</div>
 
-          {!! $location->description ? clean($location->description) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this location.</blockquote>' !!}
+        {!! $location->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($location->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
 
       </div>
 

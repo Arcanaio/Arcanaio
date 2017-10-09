@@ -22,7 +22,7 @@
 
 
 <div class="description-box">
-  {!! ($monster->description) ? clean($monster->description) :"You rolled a 1 on your Investigation roll. No description available." !!}
+          {!! $monster->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($monster->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
 </div>
 
 <div class="ui list">

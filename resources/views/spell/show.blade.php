@@ -106,7 +106,8 @@
       @endif
       <div class="item">
         <div class="header">Description</div>
-        {!! ($spell->description) ? clean($spell->description) :"You rolled a 1 on your Investigation roll. You think this may be some sort of magic." !!}
+        {!! $spell->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($spell->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
+
       </div>
       @if($spell->higher_level)
         <div class="item">

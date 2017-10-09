@@ -8,8 +8,8 @@
   </div>
 </h2>
 <div class="description-box">
-  {!! ($npc->description) ? clean($npc->description) :"You rolled a 1 on your Investigation roll. You think this may be some sort of person." !!}
 
+     {!! $npc->description ? preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', clean($npc->description)) :'<blockquote>You rolled a 1 on your Investigation roll. No description for this item.</blockquote>' !!}
 
   <div class="ui list">
     <div class="item">
